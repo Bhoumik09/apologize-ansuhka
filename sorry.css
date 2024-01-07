@@ -1,0 +1,84 @@
+.wrapper{
+    height: 250px;
+    width: 300px;
+    position: relative;
+    transition-duration: 2s;
+    /* agar hamne child ko absolute liya hai, then parent relative hoga  */
+    margin:50px auto;
+    transform-style: preserve-3d;
+    margin: 20px;
+    /* margin-top: -20px; */
+    box-shadow: 20px 10px;
+    border-radius: 15px;    
+   
+}
+body{
+    background-color: aquamarine;
+}
+.wrapper:hover{
+    transform: rotateY(180deg);
+    
+}
+.list-items{
+    width :350px; 
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    
+    /* gap: 2px; */
+    
+}
+.side-a{
+    background-color:burlywood ;
+    backface-visibility:hidden;
+    z-index: 1;
+    
+    /* this property helped me to get iphone over the text  */
+}
+.side-b{
+   
+    background-color: aqua;
+    transform: rotateY(180deg);
+    /* this transfrom is req becuade jab rotate hoga tab pura roate hoga, issa hamara piche wala box ulta ho jayega , toh ussa bachna ka lia hamne pehle hi side b lko roate kiya in y axis taki baad mai jab y axis sa rotate ho toh voh seedha aaye  */
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+img{
+    height: 100%;
+    width: 100%;
+    
+}
+.side-a,.side-b{
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    border:2px solid black;
+    border-radius: 15px;
+    
+    
+    
+    /* absolute islia diya taki voh with respect to parent ek hi jagah pai aa jaye and then unhe ham 3d card bana sake  */
+}.side-a img,.side-b img{
+    border-radius: 15px;
+}
+
+#intro{
+    /* margin-top: 10px; */
+    margin-bottom: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+#intro>h1{
+    font-family: 'Teko', sans-serif;
+    font-size: 6rem;
+}
+
+
+#image-1>img,#image-2>img{
+    width: 350px;
+    height: 350px;
+    border-radius:120px;
+}
