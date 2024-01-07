@@ -5,7 +5,7 @@
 }
 .wrapper{
     height: 250px;
-    width: 300px;
+    width: 220px;
     position: relative;
     transition-duration: 2s;
     /* agar hamne child ko absolute liya hai, then parent relative hoga  */
@@ -56,6 +56,8 @@ img{
     height: 100%;
     border:2px solid black;
     border-radius: 15px;
+    font-size: 1rem;
+    
     
     
     
