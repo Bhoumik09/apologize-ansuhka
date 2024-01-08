@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 .wrapper{
-    height: 250px;
-    width: 227px;
+    height: 260px;
+    width: 260px;
     position: relative;
     transition-duration: 2s;
     /* agar hamne child ko absolute liya hai, then parent relative hoga  */
@@ -20,14 +20,17 @@
 body{
     background-color: aquamarine;
 }
+
 .wrapper:hover{
     transform: rotateY(180deg);
     
 }
 .list-items{
    
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 .side-a{
     background-color:burlywood ;
@@ -68,20 +71,37 @@ img{
 
 #intro{
     /* margin-top: 10px; */
+    
     margin-bottom: 50px;
-    width: 100vw;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-}
-#intro>h1{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 5rem;
+    font-weight: bolder;
     font-family: 'Teko', sans-serif;
-    font-size: 6rem;
 }
 
 
-#image-1>img,#image-2>img{
-    width: 350px;
-    height: 350px;
-    border-radius:120px;
+
+.teddy{
+    height: 300px; 
+    width: 500px; 
+    margin: auto;
+     display: block;
+     border-radius: 100px;
+}
+
+@media screen and (max-width:500px)  {
+    
+    #intro{
+        font-size: 3rem;
+    }
+    .teddy{
+        height: 250px; 
+        width: 300px; 
+        margin: auto;
+         display: block;
+         border-radius: 100px;
+    }
+    
 }

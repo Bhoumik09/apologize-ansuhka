@@ -9,9 +9,7 @@
         audio.currentTime=11
         // Append the audio element to the body
         document.body.appendChild(audio);
-        setInterval(()=>{
-            console.log(audio.currentTime)
-        },1000)
+        
         
     });
     
